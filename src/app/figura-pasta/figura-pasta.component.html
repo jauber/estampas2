@@ -1,0 +1,12 @@
+<h2>Figuras Pastas</h2>
+<hr>
+
+<div *ngFor="let figura of figuras">
+    <h3>
+        <a 
+            [title]="figura.nome"
+            [routerLink]="['/figuras', figura.nome]">
+            {{ figura.nome }}
+        </a>
+    </h3>
+</div>

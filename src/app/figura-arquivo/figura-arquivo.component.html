@@ -1,0 +1,18 @@
+<h2 *ngIf="figura">{{ figura.nome }}</h2>
+
+<!-- Ira mostrar somente se houver dado, não nulo, vazio -->
+<div *ngIf="figura" class="conteudo">
+    <!-- Loop para criar todas as imagens e links relacionadas -->
+    <div *ngFor="let fig of figItem" class="filhos">
+        <!-- Localizacao da imagem grande Orig -->
+        <a href="{{ figura.pathOrig + fig }}">
+            <!-- Imagem pequena Min -->
+            <img src="{{ figura.pathMin + fig }}"><br>
+             <!-- Texto da figura embaixo-->                
+            <!-- <span> -->
+                <!-- {{ fig }} -->
+            <!-- </span> -->
+        </a>
+    </div>
+    <br>
+</div>
